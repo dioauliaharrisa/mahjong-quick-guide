@@ -62,7 +62,7 @@ export default function Home() {
         gradient={{ from: "blue", to: "cyan", deg: 90 }}
         mx="auto"
       >
-        Next
+        Next 
       </Button>
     </div>
   );
