@@ -1,3 +1,4 @@
+"use client";
 import { usePageCounter } from "@/zustand";
 import { Box, Button } from "@mantine/core";
 
