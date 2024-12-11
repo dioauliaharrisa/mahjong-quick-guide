@@ -12,7 +12,7 @@ export const Header = () => {
         <Text>Game Objective</Text>
       </div>
       <div className={styles.drawer_button}>
-        <IconMenu2 stroke={2} />
+        <IconMenu2 stroke={2} /> 
       </div>
     </Box>
   );
