@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Wrapper3dTiles } from "../3d-tiles-wrapper";
 
 export const TileImage = ({ name }: { name: string }) => {
-  console.log("🦆 ~ TileImage ~ name:", name);
   return (
     <Wrapper3dTiles>
       <Image

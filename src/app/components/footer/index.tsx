@@ -1,6 +1,10 @@
+import { usePageCounter } from "@/zustand";
 import { Box, Button } from "@mantine/core";
 
 export const Footer = () => {
+  const increasePageCounter = usePageCounter(
+    (state) => state.increasePageCounter
+  );
   return (
     <>
       <Box mx="auto" maw={400} c="blue.6" bg="#fff">
@@ -14,6 +18,7 @@ export const Footer = () => {
         variant="gradient"
         gradient={{ from: "blue", to: "cyan", deg: 90 }}
         mx="auto"
+        onClick={increasePageCounter}
       >
         Next
       </Button>
