@@ -6,12 +6,33 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
- 
-  min-height: 100svh;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  height: 100%;
+  /* padding: 0 10px; */
   font-family: var(--font-geist-sans);
 
   background-color: #383838;
+
+  overflow: hidden;
+}
+
+.header {
+  flex: 0 0 10%; /* Fixed to 10% of screen height */
+  background-color: #4a4a4a; /* Example background color */
+}
+
+.content {
+  flex: 1;
+  height: calc(100vh - 10% - 20%);
+  overflow-y: auto;
+}
+
+.footer {
+  flex: 0 0 20%; /* Fixed to 20% of screen height */
+  background-color: #2a2a2a; /* Example background color */
 }
 
 .tile {
