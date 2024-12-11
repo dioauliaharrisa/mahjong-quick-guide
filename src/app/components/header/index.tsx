@@ -1,7 +1,6 @@
 import { ActionIcon, Box, Text } from "@mantine/core";
 import { IconMenu2 } from "@tabler/icons-react";
 import styles from "./index.module.css";
-import { useDisclosure } from "@mantine/hooks";
 import { usePageCounter } from "@/zustand";
 
 export const Header = () => {

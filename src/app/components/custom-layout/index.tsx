@@ -4,7 +4,6 @@ import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 import styles from "./index.module.css"; // Create styles for the layout if needed
 import { Anchor, Drawer } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
 import { usePageCounter } from "@/zustand";
 
 interface LayoutProps {
