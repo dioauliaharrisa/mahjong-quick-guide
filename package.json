@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "push-and-deploy": "git add . && git commit -m 'done' && git push origin main"
   },
   "dependencies": {
     "@mantine/core": "^7.15.0",

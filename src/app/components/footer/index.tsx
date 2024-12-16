@@ -3,24 +3,21 @@
 import { usePageCounter } from "@/zustand";
 import { Box, Button } from "@mantine/core";
 import { MapPageCounterExplanation } from "./MapPageCounterExplanation";
+import { usePathname } from "next/navigation";
 
 export const Footer = () => {
   const pageCounter = usePageCounter((state) => state.pageCounter);
   const increasePageCounter = usePageCounter(
     (state) => state.increasePageCounter
   );
-  console.log(
-    "🦆 ~ Footer ~ MapPageCounterExplanation:",
-    MapPageCounterExplanation.set
-  );
+  const pathname = usePathname();
+  const _pathname: keyof typeof MapPageCounterExplanation =
+    pathname.split("/")[1];
+
   return (
     <>
       <Box mx="auto" maw={400} c="blue.6" bg="#fff">
-        {/* The objective of the game is to make an eligible winning hand. A winning
-        hand consists of 4 sets and 1 pair (except in certain hand) Each turn,
-        you will draw a tile and discard a tile until you complete a winning
-        hand */}
-        {MapPageCounterExplanation.set[pageCounter]}
+        {MapPageCounterExplanation[_pathname]?.[pageCounter]}
       </Box>
 
       <Button

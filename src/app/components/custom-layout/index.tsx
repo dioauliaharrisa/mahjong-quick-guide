@@ -3,8 +3,9 @@ import React from "react";
 import { Header } from "@/app/components/header";
 import { Footer } from "@/app/components/footer";
 import styles from "./index.module.css"; // Create styles for the layout if needed
-import { Anchor, Drawer } from "@mantine/core";
+import { Drawer } from "@mantine/core";
 import { usePageCounter } from "@/zustand";
+import Link from "next/link";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,36 +26,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         position="right"
       >
         <div className={styles.table_of_contents}>
-          <Anchor
-            href="https://dioauliaharrisa.github.io/mahjong-quick-guide/set"
-            target="_blank"
-          >
-            Tenpai Hand
-          </Anchor>
-          <Anchor
-            href="https://dioauliaharrisa.github.io/mahjong-quick-guide//"
-            target="_blank"
-          >
-            Anchor component
-          </Anchor>
-          <Anchor
-            href="https://dioauliaharrisa.github.io/mahjong-quick-guide//"
-            target="_blank"
-          >
-            Anchor component
-          </Anchor>
-          <Anchor
-            href="https://dioauliaharrisa.github.io/mahjong-quick-guide//"
-            target="_blank"
-          >
-            Anchor component
-          </Anchor>
-          <Anchor
-            href="https://dioauliaharrisa.github.io/mahjong-quick-guide//"
-            target="_blank"
-          >
-            Anchor component
-          </Anchor>
+          <Link href="/set">Complete Hand</Link>
+          <Link href="/pinfu">Pinfu</Link>
+          <Link href="/types-of-iishanten">Types of Iishanten</Link>
         </div>
       </Drawer>
       <div className={styles.page}>
